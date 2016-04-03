@@ -1,0 +1,13 @@
+{
+  "name": "ngrokConfEditor",
+  "version": "0.0.1",
+  "description": "ngrok Conf Editor",
+  "dependencies": {
+    "http": "*",
+    "express": "*",
+    "fs": "*",
+    "multer": "*",
+    "body-parser": "*",
+    "js-yaml": "*"
+  }
+}
