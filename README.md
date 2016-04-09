@@ -7,7 +7,7 @@ Ngrok 客户端面板
     wget https://nodejs.org/dist/v4.4.2/node-v4.4.2-linux-armv7l.tar.xz
     xz -d node-v4.4.2-linux-armv7l.tar.xz
     tar xvf node-v4.4.2-linux-armv7l.tar
-    mv node-v4.4.2-linux-armv7l.tar /usr/local
+    mv node-v4.4.2-linux-armv7l /usr/local
     ln -s /usr/local/node-v4.4.2-linux-armv7l/bin/node /usr/local/bin/node
     ln -s /usr/local/node-v4.4.2-linux-armv7l/bin/npm /usr/local/bin/npm
     echo "registry = https://registry.npm.taobao.org" > ~/.npmrc
