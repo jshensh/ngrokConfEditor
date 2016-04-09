@@ -23,7 +23,7 @@ Ngrok 客户端面板
     /usr/local/node-v4.4.2-linux-armv7l/bin/forever start /ngrokConfEditor/app.js
 
 ###设置自启动
-    [将 Ngrok Conf Editor 加入自启动项](http://233.imjs.work/2535.html)
+[将 Ngrok Conf Editor 加入自启动项](http://233.imjs.work/2535.html)
 
 ###注意事项
 1. Ngrok 的服务端与客户端配置见 [树莓派教程：利用 Ngrok 穿透内网访问树莓派](http://233.imjs.work/2513.html)
