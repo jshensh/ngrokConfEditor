@@ -16,8 +16,8 @@ Ngrok 客户端面板
 
     git clone https://github.com/jshensh/ngrokConfEditor
     mv ngrokConfEditor /
-    chmod 754 ngrokConfEditor
-    cd ngrokConfEditor
+    chmod 754 /ngrokConfEditor
+    cd /ngrokConfEditor
     npm install --save
     npm install forever -g
     /usr/local/node-v4.4.2-linux-armv7l/bin/forever start /ngrokConfEditor/app.js
