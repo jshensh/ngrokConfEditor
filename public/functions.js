@@ -23,7 +23,7 @@ var showConf=function() {
                 tmp.push(i);
             }
             $("#tunnelsList").val(tmp.join(" "));
-            $("#confText").val(jsyaml.dump(re));
+            $("#confText").val(jsyaml.dump(re).replace(/\'/g,""));
         }
     });
     $('#confirmConf').modal("show");

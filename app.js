@@ -19,24 +19,23 @@ exec('killall ngrok', function(error,stdout,stderr) {
             for (var i in loadConf["tunnels"]) {
                 loadTunnels.push(i);
             }
-            exec('nohup /root/ngrok -config /root/ngrok.cfg start '+loadTunnels.join(" "),function(error,stdout,stderr) {
+            exec('/root/ngrok -config /root/ngrok.cfg start '+loadTunnels.join(" "),function(error,stdout,stderr) {
             });
         }
     });
 });
 
-app.use(express.static('public'));
+app.use(express.static(__dirname+"/public"));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.post('/commit', function(req, res) {
-    console.log(req.body.tunnelsList);
     exec('killall ngrok', function(error,stdout,stderr) {
         fs.writeFile('/root/ngrok.cfg', req.body.conf, function(err) {
             if (err) {
                 return console.error(err);
             }
-            exec('nohup /root/ngrok -config /root/ngrok.cfg start '+req.body.tunnelsList, function(error,stdout,stderr) {
+            exec('/root/ngrok -config /root/ngrok.cfg start '+req.body.tunnelsList, function(error,stdout,stderr) {
                 res.send("success");
             });
         });
